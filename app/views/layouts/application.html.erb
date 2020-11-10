@@ -13,9 +13,11 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <%= render "shared/navbar" if params[:controller] == "home" %>
-    <div class="container-xl">
+    <%= render "shared/navbar" %>
+    <div class="position-relative">
       <%= render 'shared/flashes' %>
+    </div>
+    <div class="container">
       <%= yield %>
     </div>
   </body>
