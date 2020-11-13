@@ -8,9 +8,6 @@ body {
 
 .devise-wrapper {
   height: 100vh;
-}
-
-.devise-wrapper {
   display: flex;
   align-items: center;
   padding-top: 40px;
@@ -49,6 +46,16 @@ body {
     #new-password {
       margin-bottom: -1px;
       border-radius: 0;
+    }
+
+    #client-option-label {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    #driver-option-label {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
     }
   }
 
