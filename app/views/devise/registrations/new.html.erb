@@ -1,7 +1,7 @@
 <%= render "devise/shared/error_messages", resource: resource %>
 <div class="devise-wrapper">
   <div class="form-signin">
-    <%= image_tag "icons/logo_black", height: '100', class: "mb-4", id: "devise-logo" %>
+    <%= image_tag "icons/logo_black.svg", height: '100', class: "mb-4", id: "devise-logo" %>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <h1 class="h3 mb-3 font-weight-normal">Please Sign up</h1>
       <%= f.email_field :email, 
@@ -21,25 +21,6 @@
                 placeholder: "Password confirmation", 
                 class: "form-control" 
                 %>
-      <%# <div class="d-flex mt-3">
-        <input  type="radio" 
-                class="btn-check" 
-                name="options-outlined" 
-                id="success-outlined" 
-                autocomplete="off" 
-                checked
-                >
-        <label  class="btn btn btn-outline-primary flex-fill" for="success-outlined">
-          Client</label>
-        <input  type="radio" 
-                class="btn-check" 
-                name="options-outlined" 
-                id="danger-outlined" 
-                autocomplete="off"
-                >
-        <label class="btn btn btn-outline-primary flex-fill" for="danger-outlined">
-          Driver</label>
-      </div> %>
       <div class="d-flex mt-3">
         <%= f.radio_button :role, 'client', class: "btn-check", id: "client-option" %>
         <%= f.label :role, "Client", class: "btn btn btn-outline-primary btn-sm flex-fill", for: "client-option", id: "client-option-label" %>

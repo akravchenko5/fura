@@ -1,6 +1,6 @@
 <div class="devise-wrapper">
   <main class="form-signin">
-    <%= image_tag "icons/logo_black", height: '100', class: "mb-4", id: "devise-logo" %>
+    <%= image_tag "icons/logo_black.svg", height: '100', class: "mb-4", id: "devise-logo" %>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <h1 class="h3 mb-3 font-weight-normal">Please Log in</h1>
       <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email address", class: "form-control" %>
