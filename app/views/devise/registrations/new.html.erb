@@ -1,0 +1,54 @@
+<%= render "devise/shared/error_messages", resource: resource %>
+<div class="devise-wrapper">
+  <div class="form-signin">
+    <%= image_tag "icons/logo_black", height: '100', class: "mb-4", id: "devise-logo" %>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <h1 class="h3 mb-3 font-weight-normal">Please Sign up</h1>
+      <%= f.email_field :email, 
+                autofocus: true, 
+                autocomplete: "email", 
+                class: "form-control", 
+                placeholder: "Email address" 
+                %>
+      <%= f.password_field :password, 
+                autocomplete: "new-password", 
+                class: "form-control", 
+                id: "new-password", 
+                placeholder: "Password" 
+                %>
+      <%= f.password_field :password_confirmation, 
+                autocomplete: "new-password", 
+                placeholder: "Password confirmation", 
+                class: "form-control" 
+                %>
+      <%# <div class="d-flex mt-3">
+        <input  type="radio" 
+                class="btn-check" 
+                name="options-outlined" 
+                id="success-outlined" 
+                autocomplete="off" 
+                checked
+                >
+        <label  class="btn btn btn-outline-primary flex-fill" for="success-outlined">
+          Client</label>
+        <input  type="radio" 
+                class="btn-check" 
+                name="options-outlined" 
+                id="danger-outlined" 
+                autocomplete="off"
+                >
+        <label class="btn btn btn-outline-primary flex-fill" for="danger-outlined">
+          Driver</label>
+      </div> %>
+      <div class="d-flex mt-3">
+        <%= f.radio_button :role, 'client', class: "btn-check", id: "client-option" %>
+        <%= f.label :role, "Client", class: "btn btn btn-outline-primary btn-sm flex-fill", for: "client-option", id: "client-option-label" %>
+        <%= f.radio_button :role, 'driver', class: "btn-check", id: "driver-option" %>
+        <%= f.label :role, "Driver", class: "btn btn btn-outline-primary btn-sm flex-fill", for: "driver-option", id: "driver-option-label" %>
+      </div>
+      <%= f.submit "Sign up", class: "btn btn-lg btn-primary w-100 mb-3 mt-3" %>
+    <% end %>
+    <%= render "devise/shared/links" %>
+    <p class="mt-5 mb-3 text-muted">&copy; 2020-2021</p>
+  </div>
+</div>
