@@ -3,7 +3,9 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 import 'bootstrap';
-// import '../stylesheets/application.scss';
+import '../stylesheets/application.scss';
+import '../stylesheets/devise.scss';
+import '@fortawesome/fontawesome-free/js/all';
 
 require('@rails/ujs').start();
 require('turbolinks').start();
@@ -16,3 +18,4 @@ require('channels');
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+require.context('../images', true);

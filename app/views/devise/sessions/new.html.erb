@@ -1,7 +1,8 @@
 <div class="devise-wrapper">
   <main class="form-signin">
     <%#= image_tag "icons/logo_black.svg", height: '100', class: "mb-4", id: "devise-logo" %>
-    <%= inline_svg_tag("icons/logo_black.svg", options={height: "6.4em", id: "devise-logo", style: "margin-bottom:2em;"}) %>
+    <%#= inline_svg_tag("icons/logo_black.svg", options={height: "6.4em", id: "devise-logo", style: "margin-bottom:2em;"}) %>
+    <%= image_pack_tag 'icons/logo_black.svg', height: "35", id: "devise-logo", style: "margin-bottom:2em; height:6.4em" %>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <h1 class="h3 mb-3 font-weight-normal">Please Log in</h1>
       <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email address", class: "form-control" %>
