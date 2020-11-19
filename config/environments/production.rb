@@ -63,7 +63,12 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { :host => 'fura-me.herokuapp.com', :protocol => 'https' }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.delivery_method = :mailgun
+  config.action_mailer.mailgun_settings = {
+    api_key: Rails.application.credentials.mailgun[:mailgun_api_key],
+    domain: Rails.application.credentials.mailgun[:domain_name],
+    api_host: 'api.eu.mailgun.net'  # Uncomment this line for EU region domains
+  }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.

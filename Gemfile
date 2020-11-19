@@ -32,6 +32,8 @@ gem 'devise'
 
 gem 'font-awesome-rails'
 
+gem 'mailgun-ruby'
+
 gem 'inline_svg'
 
 group :development, :test do
