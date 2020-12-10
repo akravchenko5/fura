@@ -10,10 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_13_082904) do
+ActiveRecord::Schema.define(version: 2020_11_23_144011) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cargos", force: :cascade do |t|
+    t.string "title"
+    t.string "pick_up_address"
+    t.string "drop_off_address"
+    t.datetime "pick_up_datetime"
+    t.datetime "drop_off_datetime"
+    t.string "truck_type"
+    t.text "goods"
+    t.text "details"
+    t.integer "status"
+    t.integer "weight"
+    t.integer "volume"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["status"], name: "index_cargos_on_status"
+    t.index ["user_id"], name: "index_cargos_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -33,4 +52,5 @@ ActiveRecord::Schema.define(version: 2020_11_13_082904) do
     t.index ["role"], name: "index_users_on_role"
   end
 
+  add_foreign_key "cargos", "users"
 end
