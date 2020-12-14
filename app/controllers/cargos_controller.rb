@@ -63,6 +63,17 @@ class CargosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def cargo_params
-      params.require(:cargo).permit(:title)
+      params.require(:cargo).permit(:title, 
+                                    :pick_up_address, 
+                                    :drop_off_address, 
+                                    :pick_up_datetime,
+                                    :drop_off_datetime,
+                                    :truck_type,
+                                    :goods,
+                                    :details,
+                                    :weight,
+                                    :volume,
+                                    :status
+                                    )
     end
 end
