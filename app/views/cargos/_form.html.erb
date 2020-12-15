@@ -1,0 +1,49 @@
+<%= render "shared/error_messages", resource: cargo %>
+<%= form_with(model: cargo, local: true) do |form| %>
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+    <div class="field">
+      <%= form.label :pick_up_address %>
+      <%= form.text_field :pick_up_address %>
+    </div>
+    <div class="field">
+      <%= form.label :drop_off_address %>
+      <%= form.text_field :drop_off_address %>
+    </div>
+    <div class="field">
+      <%= form.label :pick_up_datetime %>
+      <%= form.datetime_field :pick_up_datetime %>
+    </div>
+    <div class="field">
+      <%= form.label :drop_off_datetime %>
+      <%= form.datetime_field :drop_off_datetime %>
+    </div>
+    <div class="field">
+      <%= form.label :truck_type %>
+      <%= form.text_field :truck_type %>
+    </div>
+    <div class="field">
+      <%= form.label :goods %>
+      <%= form.text_field :goods %>
+    </div>
+    <div class="field">
+      <%= form.label :details %>
+      <%= form.text_field :details %>
+    </div>
+    <div class="field">
+      <%= form.label :weight %>
+      <%= form.text_field :weight %>
+    </div>
+    <div class="field">
+      <%= form.label :volume %>
+      <%= form.text_field :volume %>
+    </div>
+    <div class="field">
+      <%= form.label :status %>
+      <%= form.text_field :status %>
+    </div>
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  <% end %>

@@ -1,6 +1,5 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
@@ -37,6 +36,13 @@ Rails.application.configure do
   config.action_mailer.perform_caching = false
 
   config.action_mailer.delivery_method = :test
+
+  # config.action_mailer.delivery_method = :mailgun
+  # config.action_mailer.mailgun_settings = {
+  #   api_key: Rails.application.credentials.mailgun[:mailgun_api_key],
+  #   domain: Rails.application.credentials.mailgun[:domain_name],
+  #   api_host: 'api.eu.mailgun.net'  # Uncomment this line for EU region domains
+  # }
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
