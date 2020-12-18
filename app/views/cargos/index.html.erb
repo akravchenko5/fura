@@ -1,4 +1,48 @@
-<h1>Cargos</h1>
+<form action="" class="card m-3 p-3" >
+  <p>Search trip</p>
+  <div class="row g-3">
+    <div class="col input-group">
+      <span class="input-group-text">A</span>
+      <input type="text" class="form-control form-control-sm" placeholder="Pickup point" aria-label="First name">
+    </div>
+    <div class="col input-group">
+      <span class="input-group-text">B</span>
+      <input type="text" class="form-control form-control-sm" placeholder="Drop Off point" aria-label="Last name">
+    </div>
+    <div class="col">
+      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+        <option selected>Truck type</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+  </div>
+  <div class="row g-3">
+    <div class="col pt-2">
+      <div class="flatpickr input-group" style="margin-bottom: -1px;">
+        <input type="text" class="form-control form-control-sm bg-white rounded-0" placeholder="Drop off date and time" data-input id="flatpickr-group-top-input">
+        <span class="input-group-text" type="button" data-toggle><%= fa_icon 'calendar' %></span>
+        <span class="input-group-text rounded-0" type="button" data-clear id="flatpickr-group-top-close"><%= fa_icon 'times' %></span>
+      </div>
+      <div class="flatpickr input-group">
+        <input type="text" class="form-control form-control-sm bg-white rounded-0" placeholder="Drop off date and time" data-input id="flatpickr-group-bot-input">
+        <span class="input-group-text" type="button" data-toggle><%= fa_icon 'calendar' %></span>
+        <span class="input-group-text rounded-0" type="button" data-clear id="flatpickr-group-bot-close"><%= fa_icon 'times' %></span>
+      </div>
+    </div>
+    <div class="col input-group">
+      <input type="text" class="form-control form-control-sm" placeholder="Price from: AED" aria-label="Last name">
+      <input type="text" class="form-control form-control-sm" placeholder="Price to: AED" aria-label="Last name">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control form-control-sm" placeholder="Last name" aria-label="Last name">
+    </div>
+  </div>
+  <div class="mt-3 text-end">
+    <button type="submit" class="btn btn-primary">Filter</button>
+  </div>
+</form>
 <table>
   <thead>
     <tr>
