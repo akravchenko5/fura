@@ -5,6 +5,7 @@
 // import '../stylesheets/application.scss';
 import 'bootstrap';
 import { dateTimeFlatpickr } from './components/date_flatpckr';
+import { initAutocompleteA, initAutocompleteB } from './plugins/mapbox-gl-geocoder';
 
 require('@rails/ujs').start();
 require('turbolinks').start();
@@ -13,6 +14,8 @@ require('channels');
 
 document.addEventListener('turbolinks:load', () => {
   dateTimeFlatpickr();
+  initAutocompleteA();
+  initAutocompleteB();
 });
 
 // Uncomment to copy all static images under ../images to the output folder and reference

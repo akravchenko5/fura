@@ -1,42 +1,61 @@
-<form action="" class="card m-3 p-3" >
+<form action="" class="card m-3 p-3 shadow-sm">
   <p>Search trip</p>
   <div class="row g-3">
-    <div class="col input-group">
-      <span class="input-group-text">A</span>
-      <input type="text" class="form-control form-control-sm" placeholder="Pickup point" aria-label="First name">
+    <div class="col-sm input-group input-group-sm">
+      <div class="input-group-text">A</div>
+      <div id="geocoderA" class="flex-fill"></div>
     </div>
-    <div class="col input-group">
-      <span class="input-group-text">B</span>
-      <input type="text" class="form-control form-control-sm" placeholder="Drop Off point" aria-label="Last name">
+    <div class="col-sm input-group input-group-sm">
+      <div class="input-group-text">B</div>
+      <div id="geocoderB" class="flex-fill"></div>
     </div>
-    <div class="col">
-      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-        <option selected>Truck type</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
+    <div class="col-md input-group input-group-sm">
+      <select class="form-select form-select-sm multiple" aria-label=".form-select-sm example">
+        <option disabled selected>Truck type</option>
+        <option value="1">Van</option>
+        <option value="2">Reffer truck</option>
+        <option value="3">Full truck</option>
       </select>
     </div>
   </div>
   <div class="row g-3">
-    <div class="col pt-2">
-      <div class="flatpickr input-group" style="margin-bottom: -1px;">
-        <input type="text" class="form-control form-control-sm bg-white rounded-0" placeholder="Drop off date and time" data-input id="flatpickr-group-top-input">
+    <div class="col-md pt-2">
+      <div class="flatpickr input-group input-group-sm" style="margin-bottom: -1px;">
+        <input type="text" class="form-control bg-white rounded-0" placeholder="Pick Up date..." data-input id="flatpickr-group-top-input">
         <span class="input-group-text" type="button" data-toggle><%= fa_icon 'calendar' %></span>
         <span class="input-group-text rounded-0" type="button" data-clear id="flatpickr-group-top-close"><%= fa_icon 'times' %></span>
       </div>
-      <div class="flatpickr input-group">
-        <input type="text" class="form-control form-control-sm bg-white rounded-0" placeholder="Drop off date and time" data-input id="flatpickr-group-bot-input">
+      <div class="flatpickr input-group input-group-sm">
+        <input type="text" class="form-control bg-white rounded-0" placeholder="Drop off date..." data-input id="flatpickr-group-bot-input">
         <span class="input-group-text" type="button" data-toggle><%= fa_icon 'calendar' %></span>
         <span class="input-group-text rounded-0" type="button" data-clear id="flatpickr-group-bot-close"><%= fa_icon 'times' %></span>
       </div>
     </div>
-    <div class="col input-group">
-      <input type="text" class="form-control form-control-sm" placeholder="Price from: AED" aria-label="Last name">
-      <input type="text" class="form-control form-control-sm" placeholder="Price to: AED" aria-label="Last name">
+    <div class="col-sm">
+      <div class="input-group input-group-sm mt-2">
+        <input type="text" class="form-control form-control-sm" placeholder="Price from:" aria-label="Last name">
+        <input type="text" class="form-control form-control-sm" placeholder="Price to:" aria-label="Last name">
+        <span class="input-group-text">:AED</span>
+      </div>
+      <div class="d-flex">
+        <div class="form-check form-switch mt-2">
+          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+          <label class="form-check-label" for="flexSwitchCheckDefault">Groupage Trip</label>
+        </div>
+        <div class="form-check form-switch mt-2 ms-3">
+          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+          <label class="form-check-label" for="flexSwitchCheckDefault">DG Trip</label>
+        </div>
+      </div>
     </div>
-    <div class="col">
-      <input type="text" class="form-control form-control-sm" placeholder="Last name" aria-label="Last name">
+    <div class="col-sm pt-2 input-group input-group-sm align-self-start" id="search-checkbox-weight">
+      <input type="radio" class="btn-check" name="options-outlined" id="5-outlined" autocomplete="off">
+      <label class="btn btn-outline-primary flex-fill rounded-start" for="5-outlined">&les; 5t</label>
+      <input type="radio" class="btn-check" name="options-outlined" id="10-outlined" autocomplete="off">
+      <label class="btn btn-outline-primary flex-fill" for="10-outlined">&les; 10t</label>
+      <input type="radio" class="btn-check" name="options-outlined" id="20-outlined" autocomplete="off">
+      <label class="btn btn-outline-primary flex-fill" for="20-outlined">&les; 20t</label>
+      <span class="input-group-text">&vellip;</span>
     </div>
   </div>
   <div class="mt-3 text-end">
@@ -65,3 +84,4 @@
 </table>
 <br>
 <%= link_to 'New Cargo', new_cargo_path %>
+<%# <div id="geocoder"></div> %>

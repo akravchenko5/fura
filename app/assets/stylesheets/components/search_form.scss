@@ -1,3 +1,5 @@
+// FLATPICKER //
+
 #flatpickr-group-top-input {
   border-top-left-radius: 0.2rem !important;
 }
@@ -9,4 +11,29 @@
 }
 #flatpickr-group-bot-close {
   border-bottom-right-radius: 0.2rem !important;
+}
+
+#search-checkbox-weight {
+  .btn {
+    border: 1px solid #ced4da;
+    color: $secondary;
+    &:hover {
+      color: white;
+    }
+  }
+  input[type="radio"]:checked + label {
+    color: white;
+    border: none;
+  }
+}
+
+// MAPBOX //
+#geocoder {
+}
+.mapboxgl-ctrl-geocoder {
+  width: 100%;
+  max-width: 100%;
+  box-shadow: none;
+  border: 1px solid #ced4da;
+  border-radius: 0 0.2rem 0.2rem 0;
 }
