@@ -1,5 +1,6 @@
 import mapboxgl from 'mapbox-gl';
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
+import { cspNonce } from '@rails/ujs';
 
 const initAutocompleteA = () => {
   mapboxgl.accessToken =
