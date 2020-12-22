@@ -1,6 +1,8 @@
 import mapboxgl from 'mapbox-gl';
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 
+import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
+
 const initAutocomplete = () => {
   const mapboxglElement = document.getElementById('geocoderA');
   mapboxgl.accessToken = mapboxglElement.dataset.mapboxApiKey;
