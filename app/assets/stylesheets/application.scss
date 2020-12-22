@@ -3,3 +3,7 @@
 
 @import "layout/navbar";
 @import "base/base";
+@import "flatpickr/dist/flatpickr";
+@import "mapbox-gl/dist/mapbox-gl";
+@import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css";
+@import "components/search_form";

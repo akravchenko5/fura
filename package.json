@@ -2,12 +2,15 @@
   "name": "fura",
   "private": true,
   "dependencies": {
+    "@mapbox/mapbox-gl-geocoder": "^4.7.0",
     "@popperjs/core": "^2.5.4",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.3.0",
     "bootstrap": "^5.0.0-beta1",
+    "flatpickr": "^4.6.6",
+    "mapbox-gl": "^2.0.0",
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",
