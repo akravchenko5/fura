@@ -3,11 +3,11 @@
   <div class="row g-3">
     <div class="col-sm input-group input-group-sm">
       <div class="input-group-text">A</div>
-      <div id="geocoderA" class="flex-fill"></div>
+      <div id="geocoderA" class="flex-fill" data-mapbox-api-key="<%= Rails.application.credentials.mapboxgl[:mapboxgl_api_key] %>"></div>
     </div>
     <div class="col-sm input-group input-group-sm">
       <div class="input-group-text">B</div>
-      <div id="geocoderB" class="flex-fill"></div>
+      <div id="geocoderB" class="flex-fill" data-mapbox-api-key="<%= Rails.application.credentials.mapboxgl[:mapboxgl_api_key] %>"></div>
     </div>
     <div class="col-md input-group input-group-sm">
       <select class="form-select form-select-sm multiple" aria-label=".form-select-sm example">
